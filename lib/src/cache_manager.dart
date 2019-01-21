@@ -32,7 +32,7 @@ class DefaultCacheManager extends BaseCacheManager {
     return _instance;
   }
 
-  DefaultCacheManager._() : super(key);
+  DefaultCacheManager._() : super(key, maxNrOfCacheObjects: 10000);
 
   Future<String> getFilePath() async {
     var directory = await getTemporaryDirectory();
